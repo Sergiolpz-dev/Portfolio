@@ -12,7 +12,9 @@
     "@fontsource/alfa-slab-one": "^5.2.5",
     "@fontsource/poppins": "^5.2.5",
     "@tailwindcss/vite": "^4.0.14",
-    "astro": "^5.5.3",
     "tailwindcss": "^4.0.14"
+  },
+  "devDependencies": {
+    "astro": "^5.13.5"
   }
 }

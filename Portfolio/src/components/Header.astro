@@ -1,10 +1,58 @@
-<header class="bg-transparent h-16 fixed top-0 left-0 w-full z-10">
-    <nav class="h-full w-5/6 max-w-xl m-auto py-4 ">
-        <ul class="flex w-full justify-evenly text-sm sm:text-md 2xl:text-lg  rounded-full ">
-            <li class="cursor-pointer hover:text-[#facc15] hover:scale-105 transition 300 ease rounded-full px-3 py-2"><a href="#Home">Inicio</a></li>
-            <li class="cursor-pointer hover:text-[#facc15] hover:scale-105 transition 300 ease rounded-full px-3 py-2"><a href="#Proyects">Proyectos</a></li>
-            <li class="cursor-pointer hover:text-[#facc15] hover:scale-105 transition 300 ease rounded-full px-3 py-2"><a href="#Experiencie">Experiencia</a></li>
-            <li class="cursor-pointer hover:text-[#facc15] hover:scale-105 transition 300 ease rounded-full px-3 py-2"><a href="#About">Sobre mí</a></li>
+<header class="bg-transparent h-16 fixed top-0 left-0 w-full z-10 font-['Poppins']">
+    <nav class="h-full w-5/6 max-w-lg m-auto py-4 ">
+        <ul id="navbar" class="flex w-full justify-evenly text-xs md:text-sm rounded-full ">
+            <li class="cursor-pointer hover:text-[#facc15] hover:scale-105 transition 300 ease rounded-full px-3 py-2"><a href="#hero">Inicio</a></li>
+            <li class="cursor-pointer hover:text-[#facc15] hover:scale-105 transition 300 ease rounded-full px-3 py-2"><a href="#projects">Proyectos</a></li>
+            <li class="cursor-pointer hover:text-[#facc15] hover:scale-105 transition 300 ease rounded-full px-3 py-2"><a href="#experiencie">Experiencia</a></li>
+            <li class="cursor-pointer hover:text-[#facc15] hover:scale-105 transition 300 ease rounded-full px-3 py-2"><a href="#about">Sobre mí</a></li>
         </ul>
     </nav>
 </header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const navbar = document.getElementById('navbar');
+        if (!navbar) return; // Evita errores si el elemento no existe
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                navbar.classList.add('bg-[#1f2937cc]');
+            } else {
+                navbar.classList.remove('bg-[#1f2937cc]');
+            }
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("scroll", function () {
+        const sections = document.querySelectorAll(".section");
+        const navItems = document.querySelectorAll("ul#navbar li");
+
+        let currentSection = "";
+
+        sections.forEach(section => {
+            const sec = section as HTMLElement;
+            const sectionTop = sec.offsetTop;
+            const sectionHeight = sec.offsetHeight;
+
+            if (window.scrollY >= sectionTop - sectionHeight / 3 && 
+                window.scrollY < sectionTop + sectionHeight - sectionHeight / 3) {
+                currentSection = sec.getAttribute("id") || "";
+            }
+        });
+
+        navItems.forEach(item => {
+            const link = item.querySelector("a");
+            if (!link) return; // Evita errores si el enlace es null
+
+            link.classList.remove("text-[#facc15]", "font-bold");
+
+            if ((link.getAttribute("href") || "").slice(1) === currentSection) {
+                link.classList.add("text-[#facc15]", "font-bold");
+            }
+        });
+    });
+});
+
+
+</script>
