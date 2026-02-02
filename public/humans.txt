@@ -1,0 +1,11 @@
+/* TEAM */
+Developer: Sergio López
+Site: https://sergiolpz.cloud
+Email: sergiolpz.dev@gmail.com
+Location: Madrid, Spain
+
+/* SITE */
+Last update: 2026/02
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: Astro, React, TypeScript, Tailwind CSS
+Software: Visual Studio Code

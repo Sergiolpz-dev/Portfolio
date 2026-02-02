@@ -1,0 +1,60 @@
+---                               
+	import '../styles/global.css';
+	import '@fontsource/alfa-slab-one';
+	import '@fontsource/poppins';
+---  
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Sergio López - Desarrollador Web | Portfolio</title>
+
+		<!-- SEO Meta Tags -->
+		<meta name="description" content="Sergio López - Desarrollador web especializado en React, TypeScript, y automatización. Portfolio con proyectos de aplicaciones web, APIs con IA y flujos automatizados." />
+		<meta name="keywords" content="desarrollador web, React, TypeScript, Tailwind CSS, portfolio, Madrid, automatización, n8n, Docker" />
+		<link rel="canonical" href="https://sergiolpz.cloud/" />
+		<meta name="theme-color" content="#0a0a0a" />
+
+		<!-- Open Graph / Facebook / LinkedIn -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://sergiolpz.cloud/" />
+		<meta property="og:title" content="Sergio López - Desarrollador Web | Portfolio" />
+		<meta property="og:description" content="Portfolio de Sergio López, desarrollador web especializado en React, TypeScript y automatización. Descubre mis proyectos y experiencia." />
+		<meta property="og:image" content="https://sergiolpz.cloud/imagen-graph.png" />
+		<meta property="og:locale" content="es_ES" />
+		<meta property="og:site_name" content="Sergio López Portfolio" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://sergiolpz.cloud/" />
+		<meta name="twitter:title" content="Sergio López - Desarrollador Web | Portfolio" />
+		<meta name="twitter:description" content="Portfolio de Sergio López, desarrollador web especializado en React, TypeScript y automatización. Descubre mis proyectos y experiencia." />
+		<meta name="twitter:image" content="https://sergiolpz.cloud/imagen-graph.png" />
+
+		<!-- Additional SEO -->
+		<meta name="author" content="Sergio López" />
+		<meta name="robots" content="index, follow" />
+
+	</head>
+	<body class="text-indigo-50 bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] bg-no-repeat bg-fixed">
+
+		<slot />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+</style>
